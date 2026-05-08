@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Local audit outputs and generated artifacts
+mineru_result.zip
+mineru_manifest.json
+mineru_submission.json
+evidence_ledger.json
+numeric_forensics.json
+evidence_images/
+*_audit.json
+*-audit-workdir/
+audit-workdir/
+
+# Local editor/project files
+.vscode/
+.idea/

@@ -1,0 +1,65 @@
+# Research Integrity Auditor
+
+A Claude/Codex skill for structured research-integrity review of scientific papers. It helps convert papers with MinerU, build a citeable evidence ledger, run deterministic numeric-forensics checks, and render annotated evidence images for suspicious source-data tables.
+
+## What it does
+
+- Converts PDFs or public paper URLs with MinerU.
+- Builds `evidence_ledger.json` from MinerU outputs, including text, tables, figures/images, captions, pages, bounding boxes, markdown lines, content blocks, table cells, and original values.
+- Runs deterministic numeric checks for repeated values, repeated fractional parts, terminal-digit patterns, Benford applicability, and simple fixed-difference/fixed-ratio table relationships.
+- Renders deterministic evidence PNGs from source XLSX audit findings.
+- Guides multi-pass review with careful risk language and manual verification requirements.
+
+## What it does not do
+
+- It does not prove fraud.
+- It does not replace journal, institutional, or expert investigation.
+- It does not use AI-generated images as evidence.
+- It does not store API tokens or secrets.
+
+Use outputs as audit leads that require human review.
+
+## Quick start
+
+Set your MinerU token outside the repository:
+
+```bash
+export MINERU_API_TOKEN="..."
+```
+
+Convert a paper:
+
+```bash
+python3 scripts/mineru_convert.py /path/to/paper.pdf --output /path/to/audit-workdir
+```
+
+Build the evidence ledger:
+
+```bash
+python3 scripts/build_evidence_ledger.py /path/to/audit-workdir \
+  --output /path/to/audit-workdir/evidence_ledger.json
+```
+
+Run numeric forensics:
+
+```bash
+python3 scripts/numeric_forensics.py /path/to/audit-workdir \
+  --output /path/to/audit-workdir/numeric_forensics.json
+```
+
+Render evidence images from source-data audit JSON:
+
+```bash
+python3 scripts/render_evidence_tables.py \
+  --audit-json /path/to/blind_source_audit.json \
+  --xlsx-root /path/to/source-data-xlsx-folder \
+  --output /path/to/audit-workdir/evidence_images
+```
+
+## Safety and responsible use
+
+Do not claim that a paper is fraudulent from a single signal. Report concrete anomalies, cite exact evidence locations, pressure-test benign explanations, and state limitations clearly.
+
+## License
+
+MIT

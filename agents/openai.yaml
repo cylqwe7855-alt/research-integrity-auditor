@@ -1,0 +1,3 @@
+display_name: Paper Fraud Auditor
+short_description: Strictly audit scientific PDFs for image, table, digit, Benford, and consistency anomalies.
+default_prompt: Audit this paper PDF using MinerU conversion, Geng-style fraud detection, Benford applicability checks, multi-agent evidence review, and annotated evidence images for high-risk tables.
