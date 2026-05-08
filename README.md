@@ -1,3 +1,5 @@
+![论文造假审查Skill](assets/paper-fraud-auditor-banner.png)
+
 # Research Integrity Auditor
 
 A Claude/Codex skill for structured research-integrity review of scientific papers. It helps convert papers with MinerU, build a citeable evidence ledger, run deterministic numeric-forensics checks, and render annotated evidence images for suspicious source-data tables.
