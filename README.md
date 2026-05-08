@@ -4,6 +4,12 @@
 
 A Claude/Codex skill for structured research-integrity review of scientific papers. It helps convert papers with MinerU, build a citeable evidence ledger, run deterministic numeric-forensics checks, and render annotated evidence images for suspicious source-data tables.
 
+## 中文介绍
+
+这是一个用于论文科研诚信审查的 Claude/Codex Skill。它可以辅助审查论文 PDF、图表、实验数据和源数据表格中的异常线索：通过 MinerU 转换论文，自动构建可引用的证据台账，运行数字取证检查，并为高风险表格生成确定性的证据标注图。
+
+它的目标不是直接“判定造假”，而是帮助你整理可复核的异常证据链：每条发现都应包含页码、图表编号、原始值、图片路径、Markdown 行号或内容块位置，并明确说明可能的善意解释和人工复核建议。
+
 ## What it does
 
 - Converts PDFs or public paper URLs with MinerU.
