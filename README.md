@@ -19,6 +19,28 @@ A Claude/Codex skill for structured research-integrity review of scientific pape
 
 Use outputs as audit leads that require human review.
 
+## One-command install
+
+Install the skill into `~/.claude/skills/paper-fraud-auditor`:
+
+```bash
+npm exec --package github:cylqwe7855-alt/research-integrity-auditor -- research-integrity-auditor
+```
+
+Short form:
+
+```bash
+npx github:cylqwe7855-alt/research-integrity-auditor
+```
+
+Install into the current project instead:
+
+```bash
+npm exec --package github:cylqwe7855-alt/research-integrity-auditor -- research-integrity-auditor --project
+```
+
+Restart Claude Code if the skill does not appear immediately.
+
 ## Quick start
 
 Set your MinerU token outside the repository:

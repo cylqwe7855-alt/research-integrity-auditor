@@ -18,6 +18,11 @@ evidence_images/
 *-audit-workdir/
 audit-workdir/
 
+# npm/local package artifacts
+node_modules/
+npm-debug.log*
+package-lock.json
+
 # Local editor/project files
 .vscode/
 .idea/

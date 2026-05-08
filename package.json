@@ -1,0 +1,32 @@
+{
+  "name": "research-integrity-auditor",
+  "version": "0.1.0",
+  "description": "One-command installer for the Paper Fraud Auditor / Research Integrity Auditor Claude skill.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cylqwe7855-alt/research-integrity-auditor.git"
+  },
+  "bin": {
+    "research-integrity-auditor": "bin/install.js"
+  },
+  "files": [
+    "SKILL.md",
+    "agents/",
+    "references/",
+    "scripts/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "claude-code",
+    "skill",
+    "research-integrity",
+    "paper-audit",
+    "mineru"
+  ],
+  "engines": {
+    "node": ">=16.7"
+  }
+}
